@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>PDF Library</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <h1>📚 My PDF Library</h1>
+
         <p>Important documents & files</p>
+
     </header>
+
+
+    <!-- PDF AREA -->
 
     <main>
 
@@ -25,19 +38,102 @@
             </div>
 
             <div class="pdf-info">
+
                 <h2>Important Document.pdf</h2>
+
                 <p>PDF • 2.4 MB</p>
+
             </div>
 
-            <button onclick="startDownload()">
+            <button
+                id="downloadButton"
+                onclick="startDownload()">
+
                 ⬇ Download PDF
+
             </button>
 
         </div>
 
     </main>
 
+
+    <!-- DOWNLOAD POPUP -->
+
+    <div id="downloadPopup"
+         class="popup">
+
+        <div class="popup-box">
+
+            <div id="downloadIcon"
+                 class="loading-icon">
+
+                ⏳
+
+            </div>
+
+            <h2 id="downloadTitle">
+                Preparing PDF...
+            </h2>
+
+            <p id="downloadText">
+                Please wait...
+            </p>
+
+
+            <!-- PROGRESS BAR -->
+
+            <div class="progress-container">
+
+                <div id="progressBar"
+                     class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <p id="progressText">
+                0%
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRANK REVEAL -->
+
+    <div id="prankScreen"
+         class="prank-screen">
+
+        <div class="prank-content">
+
+            <!-- YOUR PRANK IMAGE -->
+
+            <img src="prank.jpg"
+                 alt="Surprise">
+
+            <h1>
+                😂 You really thought this was a PDF!
+            </h1>
+
+            <p>
+                Got you! 😈
+            </p>
+
+            <button onclick="tryAgain()">
+                🔄 Try Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
-</html>
+
+        </html>
